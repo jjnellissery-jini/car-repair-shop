@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<meta charset="UTF-8">
+	<title>About - Car Repair Shop Website Template</title>
+	<link rel="stylesheet" href="/static/css/style.css" type="text/css">
+	
+</head>
+<body>
+    {%include 'header.html'%}
+    <style>
+    .center {
+            margin: auto;
+            width: 50%;
+            border: 3px solid #73AD21;
+            padding: 10px;
+           }
+    </style>
+    <div class="center">
+      <div class="container"><br><br>
+         <h3>Register</h3><br>
+           <form method="POST">
+              {%csrf_token%}
+              <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" name="name" class="form-control" >
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email address</label>
+                <input type="email" name="email" class="form-control" >
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" name="password" class="form-control">
+              </div>
+            
+              <button type="submit" class="btn btn-primary">Submit</button>
+              {%if messages%}
+             {%for msg in messages%}
+             <h3>{{msg}}</h3>
+              {%endfor%}
+              {%endif%}
+           </form>
+        </div>
+    </div>
+ {% include 'footer.html' %}    
+</body>
+</html>

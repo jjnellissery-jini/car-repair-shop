@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>About - Car Repair Shop Website Template</title>
+	<link rel="stylesheet" href="/static/css/style.css" type="text/css">
+	
+</head>
+<body>
+	{%include 'header.html'%}
+	<div id="body">
+		<div class="content">
+			<div class="section">
+				<div class="breadcrumb">
+					<span>You are here:</span>
+					<ul>
+						<li>
+							<a href="index.html">home</a>
+						</li>
+						<li>
+							<a href="about.html">about us</a>
+						</li>
+						<li>
+							<a href="testimonails.html">testimonials</a>
+						</li>
+					</ul>
+				</div>
+				<div class="testimonials">
+					<h2>testimonials</h2>
+					<div>
+						<form action="index.html">
+							<span>write a testimonials</span>
+							<label for="name">name
+								<input type="text" name="name" id="name">
+							</label>
+							<label for="location">location
+								<input type="text" name="location" id="location">
+							</label>
+							<label for="testimonial">testimonial
+								<textarea name="testimonial" id="testimonial"></textarea>
+							</label>
+							<input type="submit" name="submitBtn" id="submitBtn" value="">
+						</form>
+					</div>
+					<ul>
+						<li>
+							<p>
+								This website template has been designed by <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a> for you, for free. You can replace all this text with your own text.
+							</p>
+							<span><b>charles d. turner</b>Norfolk, VA 23502</span>
+						</li>
+						<li>
+							<p>
+								You can remove any link to our website from this website template, you're free to use this website template without linking back to us.
+							</p>
+							<span><b>herbert s. mason</b>Providence, RI 02903</span>
+						</li>
+						<li>
+							<p>
+								If you're having problems editing this website template, then don't hesitate to ask for help on the <a href="http://www.freewebsitetemplates.com/forums/">Forums</a>.
+							</p>
+							<span><b>pat b. blackburn</b>West Palm Beach, FL 33410</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="sidebar">
+				<div class="navigation">
+					<h3>about</h3>
+					<ul>
+						<li>
+							<a href="{%url 'about'%}">about</a>
+						</li>
+						<li>
+							<a href="{%url 'contact'%}">contact</a>
+						</li>
+						<li class="selected">
+							<a href="{%url 'testimonials'%}">testimonials</a>
+						</li>
+						<li>
+							<a href="{%url 'gallery'%}">gallery</a>
+						</li>
+					</ul>
+				</div>
+				<div class="post">
+					<h3>latest blog posts</h3>
+					<ul>
+						<li>
+							<a href="blog.html" class="figure"><img src="/static/images/hot-air-balloon.jpg" alt=""></a>
+							<div>
+								<span><a href="blog.html">Lorem ipsum dolor sit amet</a></span>
+								<p>
+									Sed id enim sit amet ante gravida tincidunt iaculis...
+								</p>
+							</div>
+						</li>
+						<li>
+							<a href="blog.html" class="figure"><img src="/static/images/globe.jpg" alt=""></a>
+							<div>
+								<span><a href="blog.html">Morbi luctus iaculis congue</a></span>
+								<p>
+									Nullam tempor ultrices risus at rutrum...
+								</p>
+							</div>
+						</li>
+						<li>
+							<a href="blog.html" class="figure"><img src="/static/images/man.jpg" alt=""></a>
+							<div>
+								<span><a href="blog.html">Suspendisse vel faucibus sapien</a></span>
+								<p>
+									Integer metus nunc...
+								</p>
+							</div>
+						</li>
+						<li>
+							<a href="blog.html" class="figure"><img src="/static/images/tablet.jpg" alt=""></a>
+							<div>
+								<span><a href="blog.html">Phasellus eu vulputate risus</a></span>
+								<p>
+									Nulla sagittis viverra erat id placerat...
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="gallery">
+					<h3>featured from gallery</h3>
+					<a href="gallery.html" class="figure"><img src="/static/images/featured.jpg" alt=""></a> <span><a href="gallery.html">Aenean interdum erat urna</a></span>
+					<p>
+						Nam lectus quam, dictum a vehicula ut, congue ac arcu. Sed vitae nisi ut nibh iaculis bibendums.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	{%include 'footer.html'%}
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Services - Car Repair Shop Website Template</title>
+	<link rel="stylesheet" href="/static/css/style.css" type="text/css">
+	
+</head>
+<body>
+	{%include 'header.html'%}
+	<div id="body">
+		<div class="content">
+			<div class="section">
+				<div class="breadcrumb">
+					<span>You are here:</span>
+					<ul>
+						<li>
+							<a href="{%url 'index'%}">home</a>
+						</li>
+						<li>
+							<a href="{%url 'services'%}">services</a>
+						</li>
+						<li>
+							<a href="{%url 'promo'%}">promos &amp; discounts</a>
+						</li>
+					</ul>
+				</div>
+				<div class="promo">
+					<h2>promos &amp; discounts</h2>
+					<ul>
+						<li>
+							<a href="#"><img src="/static/images/maintenance-package.jpg" alt=""></a>
+						</li>
+						<li>
+							<a href="#"><img src="/static/images/detailing-package.jpg" alt=""></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="sidebar">
+				<div class="navigation">
+					<h3>Services</h3>
+					<ul>
+						<li>
+							<a href="services.html">engine maintenance</a>
+						</li>
+						<li>
+							<a href="services.html">wheel alignment</a>
+						</li>
+						<li>
+							<a href="services.html">air condition services</a>
+						</li>
+						<li>
+							<a href="services.html">transmission</a>
+						</li>
+						<li class="selected">
+							<a href="promo.html">promos &amp; discounts</a>
+						</li>
+					</ul>
+				</div>
+				<div class="contact">
+					<h3>contact information</h3>
+					<ul>
+						<li>
+							<b>address:</b> <span>426 Grant Street Pine Hill, TX 75652</span>
+						</li>
+						<li>
+							<b>phone:</b> <span>903-889-6313</span>
+						</li>
+						<li>
+							<b>fax:</b> <span>903-889-6313</span>
+						</li>
+						<li>
+							<b>email:</b> <span><a href="http://www.freewebsitetemplates.com/misc/contact">info@carrepairshop.com</a></span>
+						</li>
+					</ul>
+				</div>
+				<div class="gallery">
+					<h3>featured from gallery</h3>
+					<a href="gallery.html" class="figure"><img src="/static/images/featured.jpg" alt=""></a> <span><a href="gallery.html">Aenean interdum erat urna</a></span>
+					<p>
+						Nam lectus quam, dictum a vehicula ut, congue ac arcu. Sed vitae nisi ut nibh iaculis bibendums.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	{%include 'footer.html'%}
+</body>
+</html>

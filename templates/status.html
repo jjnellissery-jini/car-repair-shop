@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Service Payment</title>
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+
+    <script>
+        let selectedServices = [];
+
+        function toggleService(element) {
+            let id = element.dataset.id;
+            let price = parseInt(element.dataset.price);
+
+            // Toggle selection
+            let index = selectedServices.findIndex(s => s.id === id);
+            if (index >= 0) {
+                // Already selected, remove
+                selectedServices.splice(index, 1);
+                element.classList.remove('selected');
+            } else {
+                // Add to selected
+                selectedServices.push({ id, price });
+                element.classList.add('selected');
+            }
+
+            // Update total
+            let total = selectedServices.reduce((sum, s) => sum + s.price, 0);
+            document.getElementById('total').innerText = total.toLocaleString();
+
+            // Update hidden input
+            document.getElementById('selected-services').value = selectedServices.map(s => s.id).join(',');
+        }
+    </script>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 30px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #f5f5f5;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    {%include 'header.html'%}
+    <style>
+        .center {
+            margin: auto;
+            width: 50%;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+    </style>
+    <div class="center">
+        <div class="container"><br><br>
+
+            <form method="post">
+                {% csrf_token %}
+
+                <h2> Service Status</h2>
+                <ul>
+
+                    {% for status in statuses %}
+                    <li>
+                        Booking ID: {{ status.booking.id }} —
+                        Service: {{ status.service.name }} —
+                        Status: {{ status.status }}
+                    </li>
+                    {% empty %}
+                    <li>No service statuses found.</li>
+                    {% endfor %}
+                </ul>
+
+
+
+
+            </form>
+        </div>
+    </div>
+    {%include 'footer.html'%}
+</body>
+
+</html>

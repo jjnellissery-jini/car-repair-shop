@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+
+<div id="header">
+	<div>
+		<a href="index.html" class="logo"><img src="/static/images/logo.png" alt=""></a>
+		<form action="index.html">
+			
+			
+		</form>
+	</div>
+	<div class="navigation">
+		<ul>
+			<li class="selected">
+				<a href="{% url 'index' %}">home</a>
+			</li>
+			<li>
+				<a href="{% url 'about' %}">about</a>
+				<ul>
+					<li>
+						<a href="{% url 'contact' %}">contact</a>
+					</li>
+					<li>
+						<a href="{% url 'testimonials' %}">testimonials</a>
+					</li>
+					<li>
+						<a href="{%url 'gallery'%}">gallery</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="{%url 'services'%}">services</a>
+				<ul>
+					<li>
+						<a href="{%url 'services'%}">engine maintenance</a>
+					</li>
+					<li>
+						<a href="{%url 'services'%}">wheel allignment</a>
+					</li>
+					<li>
+						<a href="{%url 'services'%}">air condition services</a>
+					</li>
+					<li>
+						<a href="{%url 'services'%}">transmission</a>
+					</li>
+					<li>
+						<a href="{%url 'promo'%}">promos &amp; discounts</a>
+					</li>
+				</ul>
+			</li>
+			{%if cuser%}
+			<li >
+				<a href="{%url 'servicestatus' %}">status</a>
+			</li>
+            
+			
+			<li class="nav-item">
+				<a class="nav-link" href="{%url 'booking'%}">book an appointment</a>
+			</li>
+			
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'logout' %}">Logout</a>
+			</li>
+			{%else%}
+			<li>
+				<a href="{%url 'login'%}">login</a>
+			</li>
+			{%endif%}
+		</ul>
+	</div>
+</div>
+
+
+
+</html>

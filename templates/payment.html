@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>About - Car Repair Shop Website Template</title>
+	<link rel="stylesheet" href="/static/css/style.css" type="text/css">
+
+</head>
+
+<body>
+	<style>
+		.center {
+			margin: auto;
+			width: 50%;
+			border: 3px solid #73AD21;
+			padding: 10px;
+		}
+	</style>
+	{%include 'header.html'%}
+
+	<div id="body">
+		<div class="content">
+			<div class="section">
+				<h2>Payment</h2>
+				<form method="post">
+					{% csrf_token %}
+					<h2>Selected Services:</h2>
+					<ul>
+						{% for service in booking.services.all %}
+						<li>{{ service.name }} - ${{ service.price }}</li>
+						{% empty %}
+						<li>No services selected.</li>
+						{% endfor %}
+					</ul>
+
+					<p><strong>Total: ${{ total_price }}</strong></p>
+
+
+					<label>Select Payment Method:</label>
+					<select name="method" required>
+						<option value="">--Choose--</option>
+						<option value="Credit Card">Credit Card</option>
+						<option value="UPI">UPI</option>
+						<option value="Cash">Cash</option>
+					</select>
+					<button type="submit">Pay Now</button>
+				</form>
+
+			</div>
+			<div class="sidebar">
+				<div class="navigation">
+					<h3>about</h3>
+					<ul>
+						<li>
+							<a href="about.html">the company</a>
+						</li>
+						<li class="selected">
+							<a href="team.html">the team</a>
+						</li>
+						<li>
+							<a href="testimonials.html">testimonials</a>
+						</li>
+						<li>
+							<a href="gallery.html">gallery</a>
+						</li>
+					</ul>
+				</div>
+				
+
+		</div>
+	</div>
+
+
+	{%include 'footer.html'%}
+</body>
+
+</html>

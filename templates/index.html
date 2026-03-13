@@ -1,0 +1,101 @@
+<!-- {%load static%} -->
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Car Repair Shop Website Template</title>
+	<link rel="stylesheet" href="/static/css/style.css" type="text/css">
+	
+</head>
+<body>
+	{%include 'header.html'%}
+	<div id="body">
+		<div class="header">
+			<ul>
+				<li>
+					<a href="{%url 'services'%}" class="figure"><img src="/static/images/credit-card.png" alt=""></a>
+					<div>
+						<h3><a href="{%url 'booking'%}">affordable prices</a></h3>
+						<p>
+							This website template has been designed by <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a> for you, for free. You can replace all this text with your own text.
+						</p>
+					</div>
+				</li>
+				<li>
+					<a href="{%url 'services'%}" class="figure"><img src="/static/images/service.png" alt=""></a>
+					<div>
+						<h3><a href="{%url 'services'%}">fast service</a></h3>
+						<p>
+							You can remove any link to our website from this website template, you're free to use this website template without linking back to us.
+						</p>
+					</div>
+				</li>
+				<li>
+					<a href="{%url 'services'%}" class="figure"><img src="/static/images/warranty.png" alt=""></a>
+					<div>
+						<h3><a href="{%url 'booking'%}">extensive warranty</a></h3>
+						<p>
+							If you're having problems editing this website template, then don't hesitate to ask for help on the <a href="http://www.freewebsitetemplates.com/forums/">Forums</a>.
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="body">
+			<img src="/static/images/repairs.jpg" alt="">
+			<div>
+				<h1>lorem ipsum <span>dolor sit amet</span></h1>
+				<p>
+					Consectetur adipiscing elit. Morbi luctus iaculis congue. Suspendisse vel faucibus sapien. Phasellus eu vulputate risus. Sed id enim sit amet ante gravida tincidunt iaculis eget tortor. Nullam tempor ultrices risus at rutrum. Integer metus nunc, convallis a posuere eget, placerat mollis ante
+				</p>
+				<a href="{%url 'booking'%}">book an appointment</a>
+			</div>
+		</div>
+		<div class="footer">
+			<div>
+				<h2><span>featured services</span></h2>
+				<ul>
+					<li>
+						<a href="{%url 'services'%}" class="figure"><img src="/static/images/engine-maintenace.png" alt=""></a>
+						<div>
+							<h3><a href="{%url 'services'%}">engine maintenance</a></h3>
+							<p>
+								Nulla sagittis viverra erat id placerat. Aenean interdum erat urna. Nam lectus quam, dictum a vehicula ut, congue ac arcu.
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="{%url 'services'%}" class="figure"><img src="/static/images/condition-services.png" alt=""></a>
+						<div>
+							<h3><a href="{%url 'services'%}">air condition services</a></h3>
+							<p>
+								Nulla sagittis viverra erat id placerat. Aenean interdum erat urna. Nam lectus quam, dictum a vehicula ut, congue ac arcu.
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="{%url 'services'%}" class="figure"><img src="/static/images/wheel-alignment.png" alt=""></a>
+						<div>
+							<h3><a href="{%url 'services'%}">wheel alignment</a></h3>
+							<p>
+								Nulla sagittis viverra erat id placerat. Aenean interdum erat urna. Nam lectus quam, dictum a vehicula ut, congue ac arcu.
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="{%url 'services'%}" class="figure"><img src="/static/images/transmission-repair.png" alt=""></a>
+						<div>
+							<h3><a href="{%url 'services'%}">transmission repair and replacement</a></h3>
+							<p>
+								Nulla sagittis viverra erat id placerat. Aenean interdum erat urna. Nam lectus quam, dictum a vehicula ut, congue ac arcu.
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+{%include 'footer.html'%}
+</body>
+</html>

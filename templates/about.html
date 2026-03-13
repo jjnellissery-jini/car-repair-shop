@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>About - Car Repair Shop Website Template</title>
+	<link rel="stylesheet" href="/static/css/style.css" type="text/css">
+	
+</head>
+<body>
+	{%include 'header.html'%}
+	
+	<div id="body">
+		<div class="content">
+			<div class="section">
+				<div class="breadcrumb">
+					<span>You are here:</span>
+					<ul>
+						<li>
+							<a href="{%url 'index'%}">home</a>
+						</li>
+						<li >
+							<a href="{%url 'about'%}">the company</a>
+						</li>
+						<li>
+							<a href="{%url 'contact'%}">contact</a>
+						</li>
+						<li>
+							<a href="{%url 'testimonials'%}">testimonials</a>
+						</li>
+						<li>
+							<a href="{%url 'gallery'%}">gallery</a>
+						</li>
+
+					</ul>
+				</div>
+				<div class="company">
+					<h2>the company</h2>
+					<div>
+						<img src="/static/images/car.jpg" alt="">
+						<h3>We Have Free Templates <br> for Everyone</h3>
+						<p>
+							Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free! <br> You can do a lot with them. You can modify them. You can modify them. You can use them to design websites for clients, so long as you agree with the <a href="http://www.freewebsitetemplates.com/about/terms">Terms of Use</a>. You can even remove all our links if you want to.
+						</p>
+					</div>
+					<h3>We Have More Templates for You</h3>
+					<p>
+						Looking for more templates? Just browse through all our <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a> and find what you’re looking for. But if you don’t find any website template you can use, you can try our <a href="http://www.freewebsitetemplates.com/freewebdesign/">Free Web Design</a> service and tell us all about it. Maybe you’re looking for something different, something special. And we love the challenge of doing something different and something special.
+					</p>
+					<h3>Be Part of Our Community</h3>
+					<p>
+						If you’re experiencing issues and concerns about this website template, join the discussion on <a href="http://www.freewebsitetemplates.com/forums/">on our forum</a> and meet other people in the community who share the same interests with you.
+					</p>
+					<h3>template details</h3>
+					<p>
+						Design version 5
+					</p>
+					<p>
+						Code version 3
+					</p>
+					<p>
+						Website Template details, discussion and updates for this <a href="http://www.freewebsitetemplates.com/discuss/carrepairshop/">Car Repair Shop Website Template</a>.
+					</p>
+					<p>
+						Website Template design by <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a>.
+					</p>
+					<p>
+						Please feel free to remove some or all the text and links of this page and replace it with your own About content.
+					</p>
+				</div>
+			</div>
+			<div class="sidebar">
+				<div class="navigation">
+					<h3>about</h3>
+					<ul>
+						<li class="selected">
+							<a href="{%url 'about'%}">the company</a>
+						</li>
+						<li>
+							<a href="{%url 'contact'%}">contact</a>
+						</li>
+						<li>
+							<a href="{%url 'testimonials'%}">testimonials</a>
+						</li>
+						<li>
+							<a href="{%url 'gallery'%}">gallery</a>
+						</li>
+					</ul>
+				</div>
+				<div class="post">
+					<h3>latest blog posts</h3>
+					<ul>
+						<li>
+							<a href="blog.html" class="figure"><img src="/static/images/hot-air-balloon.jpg" alt=""></a>
+							<div>
+								<span><a href="blog.html">Lorem ipsum dolor sit amet</a></span>
+								<p>
+									Sed id enim sit amet ante gravida tincidunt iaculis...
+								</p>
+							</div>
+						</li>
+						<li>
+							<a href="blog.html" class="figure"><img src="/static/images/globe.jpg" alt=""></a>
+							<div>
+								<span><a href="blog.html">Morbi luctus iaculis congue</a></span>
+								<p>
+									Nullam tempor ultrices risus at rutrum...
+								</p>
+							</div>
+						</li>
+						<li>
+							<a href="blog.html" class="figure"><img src="/static/images/man.jpg" alt=""></a>
+							<div>
+								<span><a href="blog.html">Suspendisse vel faucibus sapien</a></span>
+								<p>
+									Integer metus nunc...
+								</p>
+							</div>
+						</li>
+						<li>
+							<a href="blog.html" class="figure"><img src="/static/images/tablet.jpg" alt=""></a>
+							<div>
+								<span><a href="blog.html">Phasellus eu vulputate risus</a></span>
+								<p>
+									Nulla sagittis viverra erat id placerat...
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="gallery">
+					<h3>featured from gallery</h3>
+					<a href="{%url 'gallery'%}" class="figure"><img src="/static/images/featured.jpg" alt=""></a> <span><a href="gallery.html">Aenean interdum erat urna</a></span>
+					<p>
+						Nam lectus quam, dictum a vehicula ut, congue ac arcu. Sed vitae nisi ut nibh iaculis bibendums.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+{%include 'footer.html'%}
+</body>
+</html>
